@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunteerConnect - Volunteer Coordination System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+        <div class="container">
+        <nav>
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="Logo.png" alt="VolunteerConnect Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="btn" id="loginBtn">Login</a>
+                <a href="#" class="btn btn-secondary" id="signupBtn">Sign Up</a>
+            </div>
+        </nav>
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Connect, Volunteer, Make a Difference</h1>
+                <p>Our platform makes it easy to find volunteer opportunities, manage events, and track your impact in the community.</p>
+                <a href="#" class="btn btn-accent">Find Opportunities</a>
+                <a href="#" class="btn btn-secondary">Organize Volunteers</a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Do! </h2>
+                <p> We Do everything you need to coordinate volunteers and make a positive impact in your community</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                   <div class="feature-card feature-1">
+    <h3>Easy Event Creation</h3>
+    <p>Create volunteer events in minutes with our simple form. Add details, requirements, and needed roles.</p>
+</div>
+                </div>
+                <div class="feature-card">
+                   <div class="feature-card feature-2">
+    <h3>Volunteer Matching</h3>
+    <p>Our system matches volunteers with opportunities based on their skills, interests, and availability.</p>
+</div>
+
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card feature-3">
+    <h3>Impact Tracking</h3>
+    <p>Track hours volunteered, tasks completed, and the overall impact your organization is making.</p>
+</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card feature-4">
+    <h3>Mobile Access</h3>
+    <p>Volunteers can sign up for events and receive updates on the go with our mobile-friendly platform.</p>
+</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card feature-5">
+    <h3>Automated Communications</h3>
+    <p>Send automatic reminders, updates, and thank you messages to keep volunteers engaged.</p>
+</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card feature-6">
+    <h3>Reporting & Analytics</h3>
+    <p>Generate detailed reports on volunteer participation, hours contributed, and event success.</p>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Volunteer Events</h2>
+                <p>Join these upcoming opportunities to make a difference in your community</p>
+            </div>
+            <div class="events-container" id="eventsContainer">
+                <!-- Events will be loaded by JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn btn-secondary">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What People Are Saying</h2>
+                <p>Hear from organizations and volunteers who have used our platform</p>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "This platform has revolutionized how we manage our volunteer program. We've seen a 40% increase in volunteer retention since we started using VolunteerConnect."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://source.unsplash.com/random/100x100/?woman" alt="Sarah Johnson" class="author-image">
+                        <div class="author-details">
+                            <h4>Sarah Johnson</h4>
+                            <p>Nonprofit Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I love how easy it is to find volunteering opportunities that match my skills and schedule. I've discovered causes I'm passionate about that I never knew existed."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://source.unsplash.com/random/100x100/?man" alt="Michael Chen" class="author-image">
+                        <div class="author-details">
+                            <h4>Michael Chen</h4>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The impact tracking features have been invaluable for reporting to our board and donors. We can now clearly demonstrate the difference our volunteers are making."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://source.unsplash.com/random/100x100/?executive" alt="Jessica Williams" class="author-image">
+                        <div class="author-details">
+                            <h4>Jessica Williams</h4>
+                            <p>Nonprofit Executive Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join thousands of volunteers and organizations who are using our platform to create positive change in communities around the world.</p>
+            <a href="#" class="btn btn-accent">Sign Up as Volunteer</a>
+            <a href="#" class="btn">Register Your Organization</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>VolunteerConnect</h3>
+                    <p>Making volunteer coordination simple and effective for organizations and volunteers alike.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Volunteer Guidelines</a></li>
+                        <li><a href="#">Organization Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li>Email: info@volunteerconnect.org</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Volunteer Street, Community City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 VolunteerConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" required>
+  </div>
+  <div class="form-group">
+    <label for="loginUserType">I am a:</label>
+    <select id="loginUserType" required>
+      <option value="volunteer">Volunteer</option>
+      <option value="organization">Organization</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Login</button>
+</form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="userType">I am a:</label>
+                    <select id="userType" required>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="organization">Organization</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
