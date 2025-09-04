@@ -26,13 +26,13 @@
 }
 
 .header-flex h1 {
-  margin-left: 20px;   /* extra gap from left */
+  margin-left: 20px;   
   font-size: 1.8rem;
   color: var(--primary);
 }
 
 .header-flex a {
-  margin-right: 20px;  /* push logout away from edge */
+  margin-right: 20px;  
 }
 
 
@@ -59,12 +59,52 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
+
+     .select-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .select-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    #categorySelect {
+      appearance: none;
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e1e5e9;
+      border-radius: 8px;
+      background-color: #fff;
+      font-size: 1rem;
+      color: var(--dark);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 20px;
+    }
+
+    #categorySelect:hover {
+      border-color: var(--primary);
+      box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+    }
+
+    #categorySelect:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    }
   </style>
 </head>
 <body>
   <header class="dashboard-header">
   <div class="container header-flex">
-   <a href="index.html"> <h1>Welcome Volunteer!</h1></a>
+<h1>Welcome Volunteer!</h1>
     <a href="index.html" class="btn btn-secondary">Logout</a>
   </div>
 </header>
@@ -72,23 +112,28 @@
   <section class="dashboard container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h3>Your Preferences</h3>
-      <label for="categorySelect">Choose Volunteering Category:</label>
-      <select id="categorySelect">
-        <option>Education</option>
-        <option>Environment</option>
-        <option>Healthcare</option>
-        <option>Community Development</option>
-        <option>Animal Welfare</option>
-      </select>
+ 
+      <div class="select-container">
+        <label for="categorySelect">Choose Volunteering Category:</label>
+        <select id="categorySelect">
+          <option>Education</option>
+          <option>Environment</option>
+          <option>Healthcare</option>
+          <option>Community Development</option>
+          <option>Animal Welfare</option>
+        </select>
+      </div>
 
       <div class="notifications">
         <h3>Notifications</h3>
         <div id="notificationsList"></div>
       </div>
+       <div class="back-to-home">
+        <a href="index.html" class="home-link">Back to Homepage</a>
+      </div>
     </aside>
 
-    <!-- Main Content -->
+ 
     <div>
       <h2>All Ongoing Volunteer Programs</h2>
       <div class="events-container" id="volunteerEvents"></div>
@@ -97,7 +142,7 @@
 
   <script src="script.js"></script>
   <script>
-    // Add categories to sample events
+    
     events.forEach((e, i) => {
       const categories = ["Environment","Healthcare","Education"];
       e.category = categories[i % categories.length];
@@ -107,13 +152,13 @@
     const categorySelect = document.getElementById('categorySelect');
     const notificationsList = document.getElementById('notificationsList');
 
-    // Load saved category
+  
     const savedCategory = localStorage.getItem('volunteerCategory');
     if (savedCategory) {
       categorySelect.value = savedCategory;
     }
 
-    // Render events
+  
     function renderEvents() {
       container.innerHTML = '';
       events.forEach(ev => {
@@ -133,13 +178,13 @@
 
       document.querySelectorAll('.apply-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          alert("Your application for this event has been sent!");
+          alert("Your application has been sent! We will Notify you shortly");
           console.log("Volunteer applied for event ID:", btn.dataset.id);
         });
       });
     }
 
-    // Render notifications
+
    function renderNotifications() {
   notificationsList.innerHTML = '';
   const category = categorySelect.value;
@@ -159,16 +204,15 @@
     });
   }
 
-  // Add click functionality for notification apply buttons
   document.querySelectorAll('.apply-note-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      alert("Your application for this event has been sent!");
+      alert("Your application has been sent! We will Notify you shortly");
       console.log("Volunteer applied via notification for event ID:", btn.dataset.id);
     });
   });
 }
 
-    // Save preference & refresh notifications
+ 
     categorySelect.addEventListener('change', () => {
       localStorage.setItem('volunteerCategory', categorySelect.value);
       renderNotifications();
