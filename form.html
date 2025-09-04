@@ -103,10 +103,19 @@
                 <input type="file"  name="Profile" accept=".png, .jpg, .jpeg" >
                 
             </div>
-            
+            <div class="form-group">
+                <label for="name">NIC Number</label>
+                <input type="text" id="NIC" name="NIC" required>
+                
+            </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="name">Phone Number</label>
+                <input type="text" id="tel" name="tel" required>
                 
             </div>
             <div class="form-group">
@@ -115,23 +124,16 @@
                 </div>
             
             <div class="form-group">
-                <label for="subject">Categories We Support</label>
-                <select id="subject" name="categories-section" required>
+                <label for="subject">Your Role</label>
+                <select id="subject" name="role" required>
                     <option value="">Select a Category</option>
-                    <option value="general">Education</option>
-                    <option value="support">Environment</option>
-                    <option value="billing">Healthcare</option>
-                    <option value="feedback">Community Development</option>
-                    <option value="feedback">Animal Welfare</option>
+                    <option value="feedback">Volunteer</option>
+                    <option value="feedback">Organization</option>
                 </select>
                 
             </div>
             
-            <div class="form-group">
-                <label for="message">A small introduction about yourself</label>
-                <textarea id="message" name="message" required></textarea>
-                
-            </div>
+            
             
             <button type="submit">Submit</button>
         </form>
