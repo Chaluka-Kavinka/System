@@ -81,7 +81,7 @@ function displayEvents() {
                     <span>${event.volunteersNeeded} volunteers needed</span>
                     <span>${event.volunteersSignedUp} signed up</span>
                 </div>
-                <a href="#" class="btn">Sign Up</a>
+                <a href="#" class="btn">Apply</a>
             </div>
         `;
         eventsContainer.appendChild(eventCard);
