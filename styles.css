@@ -493,6 +493,15 @@ footer {
     border-radius: 4px;
     font-size: 1rem;
 }
+.error-message {
+    color: #ff3860;
+    background-color: #ffe5e9;
+    border: 1px solid #ff3860;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: none; /* Hidden by default */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -111,23 +111,74 @@ window.addEventListener('click', function(e) {
 });
 
 // Form submissions
+// Form submissions
 loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Get the error div
+    const errorDiv = document.getElementById('loginError');
+    
+    // Reset error message
+    errorDiv.style.display = 'none';
+    errorDiv.textContent = '';
+    
+    // Gather form data
+    const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const userType = document.getElementById('loginUserType').value;
 
-    console.log('Login attempt:', { email, password, userType });
-    alert('Login successful! Redirecting...');
-
-    loginModal.style.display = 'none';
-
-    if (userType === 'volunteer') {
-        window.location.href = 'volunteer.html';
-    } else if (userType === 'organization') {
-        window.location.href = 'organization.html';
+    // Basic validation
+    if (!username || !email || !password || !userType) {
+        showError(errorDiv, 'Please fill in all fields.');
+        return;
     }
+
+    // Email format validation (simple version)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showError(errorDiv, 'Please enter a valid email address.');
+        return;
+    }
+
+    console.log('Login attempt:', { username, email, password, userType });
+    
+    // SIMULATION: Replace this with actual API call to your server
+    simulateLogin(username, email, password, userType, errorDiv);
 });
+
+// Function to simulate a login API call (Replace with real fetch() to your backend)
+function simulateLogin(username, email, password, userType, errorDiv) {
+    // This is a mock function. In reality, you would send a request to your server.
+    
+    // Simulate network delay
+    setTimeout(() => {
+        // Mock successful login for demonstration
+        // In a real scenario, success would be determined by the server response
+        const isSuccess = true; // Change to false to simulate failed login
+
+        if (isSuccess) {
+            // On success - clear form and redirect
+            loginForm.reset();
+            loginModal.style.display = 'none';
+            
+            if (userType === 'volunteer') {
+                window.location.href = 'volunteer.html';
+            } else if (userType === 'organization') {
+                window.location.href = 'organization.html';
+            }
+        } else {
+            // On failure - show error
+            showError(errorDiv, 'Invalid username, email or password. Please try again.');
+        }
+    }, 1000); // Simulate 1 second network delay
+}
+
+// Helper function to display errors
+function showError(errorElement, message) {
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+}
 
 // Demo button functionality
 document.addEventListener('click', function(e) {
