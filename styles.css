@@ -398,27 +398,6 @@ footer {
     color: white;
 }
 
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-links a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    transition: background-color 0.3s ease;
-}
-
-.social-links a:hover {
-    background-color: var(--primary);
-}
 
 .copyright {
     text-align: center;
@@ -525,4 +504,13 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
     }
+}
+#adminLoginBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    font-size: 22px;
+    color:darkorchid;
 }
