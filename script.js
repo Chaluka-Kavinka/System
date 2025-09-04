@@ -32,12 +32,12 @@ const events = [
 // DOM Elements
 const eventsContainer = document.getElementById('eventsContainer');
 const loginBtn = document.getElementById('loginBtn');
-const signupBtn = document.getElementById('signupBtn');
+
 const loginModal = document.getElementById('loginModal');
-const signupModal = document.getElementById('signupModal');
+
 const closeButtons = document.querySelectorAll('.close');
 const loginForm = document.getElementById('loginForm');
-const signupForm = document.getElementById('signupForm');
+
 
 // Display events on page load
 document.addEventListener('DOMContentLoaded', function() {
@@ -94,15 +94,12 @@ loginBtn.addEventListener('click', function(e) {
     loginModal.style.display = 'block';
 });
 
-signupBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    signupModal.style.display = 'block';
-});
+
 
 closeButtons.forEach(button => {
     button.addEventListener('click', function() {
         loginModal.style.display = 'none';
-        signupModal.style.display = 'none';
+       
     });
 });
 
@@ -110,9 +107,7 @@ window.addEventListener('click', function(e) {
     if (e.target === loginModal) {
         loginModal.style.display = 'none';
     }
-    if (e.target === signupModal) {
-        signupModal.style.display = 'none';
-    }
+    
 });
 
 // Form submissions
@@ -134,26 +129,10 @@ loginForm.addEventListener('submit', function(e) {
     }
 });
 
-signupForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('signupEmail').value;
-    const password = document.getElementById('signupPassword').value;
-    const userType = document.getElementById('userType').value;
-    
-    if (userType === 'volunteer') {
-  window.location.href = 'volunteer.html';
-} else if (userType === 'organization') {
-  window.location.href = 'organization.html';
-}
-    
-    signupModal.style.display = 'none';
-});
-
 // Demo button functionality
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('btn') && e.target.getAttribute('href') === '#') {
         e.preventDefault();
-        alert('This is a demo button. In a real application, this would perform the intended action.');
+        
     }
 });

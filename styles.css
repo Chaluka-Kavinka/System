@@ -143,7 +143,7 @@ nav {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('Background.png') no-repeat center center/cover;
+                url('images/Background.png') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 120px 0;
@@ -222,27 +222,27 @@ nav {
     margin-bottom: 10px;
 }
 .feature-1 {
-    background: url('Event\ creation.png') no-repeat center/cover;
+    background: url('images/Event\ creation.png') no-repeat center/cover;
     color: white;
 }
 .feature-2 {
-    background: url('Volunteermatching.png') no-repeat center/cover;
+    background: url('images/Volunteermatching.png') no-repeat center/cover;
     color: white;
 }
 .feature-3 {
-    background: url('impact.png') no-repeat center/cover;
+    background: url('images/impact.png') no-repeat center/cover;
     color: white;
 }
 .feature-4 {
-    background: url('AutoCommunications.png') no-repeat center/cover;
+    background: url('images/AutoCommunications.png') no-repeat center/cover;
     color: white;
 }
 .feature-5 {
-    background: url('Reporting.png') no-repeat center/cover;
+    background: url('images/Reporting.png') no-repeat center/cover;
     color: white;
 }
 .feature-6 {
-    background: url('ReportAnalytics.jpg') no-repeat center/cover;
+    background: url('images/ReportAnalytics.jpg') no-repeat center/cover;
     color: white;
 }
 

@@ -18,6 +18,7 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+            background-image:url(images/backgroundpic.jpg)
         }
         
         .form-container {
@@ -95,13 +96,18 @@
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
-                <div class="error" id="nameError"></div>
+                
+            </div>
+            <div class="form-group">
+                <label for="name">Profile Picture</label>
+                <input type="file"  name="Profile" accept=".png, .jpg, .jpeg" >
+                
             </div>
             
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required>
-                <div class="error" id="emailError"></div>
+                
             </div>
             <div class="form-group">
                     <label for="signupPassword">Password</label>
@@ -118,13 +124,13 @@
                     <option value="feedback">Community Development</option>
                     <option value="feedback">Animal Welfare</option>
                 </select>
-                <div class="error" id="subjectError"></div>
+                
             </div>
             
             <div class="form-group">
                 <label for="message">A small introduction about yourself</label>
                 <textarea id="message" name="message" required></textarea>
-                <div class="error" id="messageError"></div>
+                
             </div>
             
             <button type="submit">Submit</button>
