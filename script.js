@@ -4,7 +4,7 @@ const events = [
         id: 1,
         title: "Central Park Cleanup",
         date: "June 15, 2023 • 9:00 AM - 12:00 PM",
-        image: "https://source.unsplash.com/random/600x400/?parkcleanup",
+        image: "images/event1.jpg",
         description: "Help keep our beloved Central Park clean and beautiful for everyone to enjoy.",
         volunteersNeeded: 20,
         volunteersSignedUp: 15
@@ -13,7 +13,7 @@ const events = [
         id: 2,
         title: "Food Bank Assistance",
         date: "June 18, 2023 • 10:00 AM - 2:00 PM",
-        image: "https://source.unsplash.com/random/600x400/?foodbank",
+        image: "images/event2.jpg",
         description: "Help sort and package food donations for distribution to families in need.",
         volunteersNeeded: 15,
         volunteersSignedUp: 10
@@ -22,7 +22,7 @@ const events = [
         id: 3,
         title: "After School Tutoring",
         date: "June 20, 2023 • 3:00 PM - 5:00 PM",
-        image: "https://source.unsplash.com/random/600x400/?tutoring",
+        image: "images/event3.jpg",
         description: "Provide academic support and mentorship to elementary school students.",
         volunteersNeeded: 10,
         volunteersSignedUp: 8
