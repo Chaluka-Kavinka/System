@@ -1,7 +1,7 @@
 <?php
 // signup.php
 // Connect to your database
-$conn = new mysqli("localhost", "your_db_user", "your_db_password", "your_db_name");
+$conn = new mysqli("localhost", "root", "", "your_db_name");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
