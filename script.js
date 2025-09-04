@@ -187,3 +187,7 @@ document.addEventListener('click', function(e) {
         
     }
 });
+// Hidden Admin Login Button Functionality
+document.querySelector('.copyright').addEventListener('dblclick', function() {
+    document.getElementById('adminLoginBtn').style.display = 'block';
+});

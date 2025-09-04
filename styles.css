@@ -526,3 +526,12 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+#adminLoginBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    font-size: 22px;
+    color:darkorchid;
+}
