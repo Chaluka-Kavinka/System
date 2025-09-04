@@ -64,12 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Display events in the events container
 function displayEvents() {
+    if (!eventsContainer) {
+        throw new Error('eventsContainer element not found in the DOM');
+    }
     eventsContainer.innerHTML = '';
-    
     events.forEach(event => {
         const eventCard = document.createElement('div');
         eventCard.classList.add('event-card');
-        
         eventCard.innerHTML = `
             <div class="event-image" style="background-image: url('${event.image}');"></div>
             <div class="event-details">
@@ -83,7 +84,6 @@ function displayEvents() {
                 <a href="#" class="btn">Sign Up</a>
             </div>
         `;
-        
         eventsContainer.appendChild(eventCard);
     });
 }
